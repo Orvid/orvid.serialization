@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0DAE2D7-D0DA-4840-9005-C4D546DA5A8A}</ProjectGuid>
+    <Compiler>DMD2</Compiler>
+    <PreferOneStepBuild>true</PreferOneStepBuild>
+    <UseDefaultCompiler>true</UseDefaultCompiler>
+    <IncrementalLinking>true</IncrementalLinking>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <Externalconsole>true</Externalconsole>
+    <Target>StaticLibrary</Target>
+    <OutputName>orvid.json.lib</OutputName>
+    <UnittestMode>false</UnittestMode>
+    <ObjectsDirectory>obj\Debug</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <LinkinThirdPartyLibraries>false</LinkinThirdPartyLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Release</OutputPath>
+    <Externalconsole>true</Externalconsole>
+    <Target>StaticLibrary</Target>
+    <OutputName>orvid.json.lib</OutputName>
+    <UnittestMode>false</UnittestMode>
+    <LinkinThirdPartyLibraries>false</LinkinThirdPartyLibraries>
+    <ObjectsDirectory>obj\Release</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <ExtraCompilerArguments>-O -inline</ExtraCompilerArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Unittest</OutputPath>
+    <Externalconsole>true</Externalconsole>
+    <Target>Executable</Target>
+    <OutputName>orvid.json.unittest.exe</OutputName>
+    <UnittestMode>true</UnittestMode>
+    <LinkinThirdPartyLibraries>false</LinkinThirdPartyLibraries>
+    <ObjectsDirectory>obj\Unittest</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <ExtraCompilerArguments>-dip25</ExtraCompilerArguments>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="orvid\traitsExt.d" />
+    <Compile Include="orvid\performance\conv.d" />
+    <Compile Include="orvid\performance\bitmanip.d" />
+    <Compile Include="orvid\performance\string.d" />
+    <Compile Include="orvid\testing.d" />
+    <Compile Include="orvid\serialization\json.d" />
+    <Compile Include="orvid\serialization\core.d" />
+    <Compile Include="orvid\serialization\package.d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="orvid\" />
+    <Folder Include="orvid\performance\" />
+    <Folder Include="orvid\serialization\" />
+  </ItemGroup>
+</Project>
