@@ -16,7 +16,7 @@
     <OutputPath>bin\Debug</OutputPath>
     <Externalconsole>true</Externalconsole>
     <Target>StaticLibrary</Target>
-    <OutputName>orvid.json.lib</OutputName>
+    <OutputName>orvid.serialization.lib</OutputName>
     <UnittestMode>false</UnittestMode>
     <ObjectsDirectory>obj\Debug</ObjectsDirectory>
     <DebugLevel>0</DebugLevel>
@@ -27,19 +27,19 @@
     <OutputPath>bin\Release</OutputPath>
     <Externalconsole>true</Externalconsole>
     <Target>StaticLibrary</Target>
-    <OutputName>orvid.json.lib</OutputName>
+    <OutputName>orvid.serialization.lib</OutputName>
     <UnittestMode>false</UnittestMode>
     <LinkinThirdPartyLibraries>false</LinkinThirdPartyLibraries>
     <ObjectsDirectory>obj\Release</ObjectsDirectory>
     <DebugLevel>0</DebugLevel>
-    <ExtraCompilerArguments>-O -inline</ExtraCompilerArguments>
+    <ExtraCompilerArguments>-dip25 -O -inline</ExtraCompilerArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Unittest</OutputPath>
     <Externalconsole>true</Externalconsole>
     <Target>Executable</Target>
-    <OutputName>orvid.json.unittest.exe</OutputName>
+    <OutputName>orvid.serialization.unittest.exe</OutputName>
     <UnittestMode>true</UnittestMode>
     <LinkinThirdPartyLibraries>false</LinkinThirdPartyLibraries>
     <ObjectsDirectory>obj\Unittest</ObjectsDirectory>
