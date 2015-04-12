@@ -1,0 +1,9 @@
+{
+	"name": "orvid.serialization",
+	"description": "A JSON serializer that uses compile-time reflection to generate optimal code paths.",
+	"license": "Public Domain",
+	"authors": ["Orvid King"],
+	"sourcePaths": ["./orvid.serialization/"],
+	"importPaths": ["./orvid.serialization/"],
+	"targetType": "staticLibrary"
+}

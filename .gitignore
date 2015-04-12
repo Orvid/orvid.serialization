@@ -1,4 +1,7 @@
 bin
 obj
+.dub
 
 *.userprefs
+dub.selections.json
+orvid.serialization.lib
